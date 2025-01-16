@@ -22,6 +22,7 @@
       }
       .collapse-arrow {
         transition: transform 0.3s ease;
+        cursor: pointer;
       }
       .collapse-arrow.open {
         transform: rotate(-180deg);
