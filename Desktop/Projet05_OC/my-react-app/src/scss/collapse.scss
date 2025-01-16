@@ -20,6 +20,12 @@
       p {
         margin: 0;
       }
+      .collapse-arrow {
+        transition: transform 0.3s ease;
+      }
+      .collapse-arrow.open {
+        transform: rotate(-180deg);
+      }
     }
     .collapse-description {
       background: #f6f6f6;
@@ -28,6 +34,42 @@
       font-weight: 400;
       padding: 15px;
       line-height: 25.67px;
+    }
+    .collapse-description-wrapper {
+      overflow: hidden; /* Cache le contenu lorsqu'il est fermé */
+      height: 0;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: height 0.3s ease, transform 0.3s ease;
+    }
+
+    .collapse-description-wrapper.open {
+      height: auto; /* Ajuste la hauteur automatiquement en fonction du contenu */
+      transform: scaleY(1);
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767.98px) {
+  .main {
+    .collapses {
+      gap: 20px;
+      margin-top: 19px;
+      margin-bottom: 19px;
+    }
+    .collapse-wrapper .collapse {
+      padding: 10px;
+      .collapse-title {
+        font-size: 13px;
+      }
+      .collapse-arrow {
+        width: 16px;
+      }
+    }
+    .collapse-description-wrapper.open .collapse-description {
+      font-size: 12px;
+      line-height: 18px;
+      padding: 10px;
     }
   }
 }
