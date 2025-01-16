@@ -1,0 +1,33 @@
+.main {
+  .collapses {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1023px;
+    gap: 28px;
+    margin-top: 38px;
+    margin-bottom: 36px;
+    .collapse {
+      display: flex;
+      justify-content: space-between;
+      background-color: #ff6060;
+      border-radius: 5px;
+      font-family: Montserrat;
+      font-size: 24px;
+      font-weight: 700;
+      color: white;
+      padding: 10px 20px 10px 15px;
+      p {
+        margin: 0;
+      }
+    }
+    .collapse-description {
+      background: #f6f6f6;
+      font-family: Montserrat;
+      font-size: 18px;
+      font-weight: 400;
+      padding: 15px;
+      line-height: 25.67px;
+    }
+  }
+}
