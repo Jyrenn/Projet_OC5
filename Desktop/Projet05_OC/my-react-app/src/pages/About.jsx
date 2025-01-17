@@ -5,7 +5,7 @@ import Collapse from "../components/collapse";
 import defaultImage from "../assets/Images/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png";
 import data from "../Data/valeurs.json";
 
-function Home() {
+function About() {
   return (
     <div className="main">
       <Banner image={defaultImage} />
@@ -21,4 +21,4 @@ function Home() {
     </div>
   );
 }
-export default Home;
+export default About;

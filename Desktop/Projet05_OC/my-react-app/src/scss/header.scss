@@ -7,20 +7,26 @@
 .liens {
   display: flex;
   gap: 20px;
+
   a {
     color: black;
     text-decoration: none;
     font-family: Montserrat;
     font-size: 24px;
     font-weight: 500;
+    text-decoration-skip-ink: none; /* Assure que le soulignement passe bien sous les lettres */
   }
-  a:hover,
-  a:active {
+
+  a:hover {
+    text-decoration-line: underline;
+  }
+
+  a.active {
     text-decoration-line: underline;
   }
 }
 
-.navbar__logo img {
+.navbar-logo img {
   width: 210px;
   height: auto;
 }
