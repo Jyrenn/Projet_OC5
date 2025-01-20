@@ -10,7 +10,12 @@ function Home() {
       <Banner texte="Chez vous, partout et ailleurs" />
       <div className="gallery">
         {data.map((item) => (
-          <Card key={item.id} title={item.title} image={item.cover} />
+          <Card
+            key={item.id}
+            id={item.id}
+            title={item.title}
+            image={item.cover}
+          />
         ))}
       </div>
     </div>
