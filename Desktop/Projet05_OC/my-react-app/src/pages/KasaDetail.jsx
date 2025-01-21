@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import data from "../Data/logements.json";
 import "../home.scss";
+import Carrousel from "../components/carrousel.jsx";
 
 function LogementDetail() {
   const { id } = useParams(); // Récupère l'ID depuis l'URL
@@ -20,15 +21,12 @@ function LogementDetail() {
   }
 
   return (
-    <div className="logement-detail">
-      <h1>{logement.title}</h1>
-      <img
-        src={logement.cover}
-        alt={logement.title}
-        className="logement-image"
-      />
-      <p>{logement.description}</p>
-      {/* Ajoutez plus de détails si nécessaire */}
+    <div className="main">
+      <div className="logement-detail">
+        <Carrousel pictures={logement.pictures} title={logement.title} />
+        <h1 className="logement-title">{logement.title}</h1>
+        <p>{logement.description}</p>
+      </div>
     </div>
   );
 }
