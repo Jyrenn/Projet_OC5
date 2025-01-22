@@ -2,13 +2,13 @@ import React from "react";
 import "../home.scss";
 import Banner from "../components/banner";
 import Collapse from "../components/collapse";
-import defaultImage from "../assets/Images/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png";
+import image from "../assets/Images/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png";
 import data from "../Data/valeurs.json";
 
 function About() {
   return (
     <div className="main">
-      <Banner image={defaultImage} />
+      <Banner image={image} />
       <div className="collapses">
         {data.map((item) => (
           <Collapse

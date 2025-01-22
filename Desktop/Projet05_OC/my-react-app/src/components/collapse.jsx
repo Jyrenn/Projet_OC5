@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../scss/collapse.scss";
 import image from "../assets/Images/fleche.png";
 
-const Collapse = ({ title, description }) => {
+const Collapse = ({ title, description, equipment }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapse = () => {
@@ -23,7 +23,14 @@ const Collapse = ({ title, description }) => {
       <div
         className={`collapse-description-wrapper ${isOpen ? "open" : "closed"}`}
       >
-        <div className="collapse-description">{description}</div>
+        {description && <p className="collapse-description">{description}</p>}
+        {equipment && Array.isArray(equipment) && (
+          <ul className="collapse-equipment">
+            {equipment.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );

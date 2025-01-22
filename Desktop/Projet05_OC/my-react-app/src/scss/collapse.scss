@@ -35,6 +35,7 @@
       font-weight: 400;
       padding: 15px;
       line-height: 25.67px;
+      margin: 0;
     }
     .collapse-description-wrapper {
       overflow: hidden; /* Cache le contenu lorsqu'il est fermé */
@@ -47,6 +48,69 @@
     .collapse-description-wrapper.open {
       height: auto; /* Ajuste la hauteur automatiquement en fonction du contenu */
       transform: scaleY(1);
+    }
+  }
+  .collapses-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 38px;
+    margin-bottom: 36px;
+    gap: 76px;
+    .collapse {
+      display: flex;
+      justify-content: space-between;
+      background-color: #ff6060;
+      border-radius: 5px;
+      font-family: Montserrat;
+      font-size: 24px;
+      font-weight: 700;
+      color: white;
+      padding: 10px 20px 10px 15px;
+      width: 582px;
+      p {
+        margin: 0;
+      }
+      .collapse-arrow {
+        transition: transform 0.3s ease;
+        cursor: pointer;
+      }
+      .collapse-arrow.open {
+        transform: rotate(-180deg);
+      }
+    }
+    .collapse-description {
+      background: #f6f6f6;
+      font-family: Montserrat;
+      font-size: 18px;
+      font-weight: 400;
+      padding: 15px;
+      line-height: 25.67px;
+      margin: 0;
+      max-width: 582px;
+    }
+    .collapse-description-wrapper {
+      overflow: hidden; /* Cache le contenu lorsqu'il est fermé */
+      height: 0;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: height 0.3s ease, transform 0.3s ease;
+    }
+
+    .collapse-description-wrapper.open {
+      height: auto; /* Ajuste la hauteur automatiquement en fonction du contenu */
+      transform: scaleY(1);
+      ul {
+        background: #f6f6f6;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 400;
+        padding: 15px;
+        line-height: 25.67px;
+        margin: 0;
+        list-style-type: none;
+      }
     }
   }
 }
