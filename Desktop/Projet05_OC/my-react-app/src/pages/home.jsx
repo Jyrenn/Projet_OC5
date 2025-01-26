@@ -1,5 +1,5 @@
 import React from "react";
-import "../home.scss";
+import "../App.scss";
 import Banner from "../components/banner";
 import Card from "../components/card";
 import data from "../Data/logements.json";

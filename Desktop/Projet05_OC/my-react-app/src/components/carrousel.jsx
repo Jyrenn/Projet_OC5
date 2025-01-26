@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../home.scss";
+import "../scss/carrousel.scss";
 import flechedroite from "../assets/Images/fleche_droite.png";
 import flechegauche from "../assets/Images/fleche_gauche.png";
 

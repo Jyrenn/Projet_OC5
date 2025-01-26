@@ -1,5 +1,5 @@
 import React from "react";
-import "../home.scss";
+import "../App.scss";
 import Banner from "../components/banner";
 import Collapse from "../components/collapse";
 import image from "../assets/Images/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png";

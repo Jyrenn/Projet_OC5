@@ -68,7 +68,6 @@
       font-weight: 700;
       color: white;
       padding: 10px 20px 10px 15px;
-      width: 582px;
       p {
         margin: 0;
       }
@@ -88,7 +87,6 @@
       padding: 15px;
       line-height: 25.67px;
       margin: 0;
-      max-width: 582px;
     }
     .collapse-description-wrapper {
       overflow: hidden; /* Cache le contenu lorsqu'il est fermé */
@@ -131,10 +129,18 @@
         width: 16px;
       }
     }
-    .collapse-description-wrapper.open .collapse-description {
-      font-size: 12px;
-      line-height: 18px;
-      padding: 10px;
+    .collapse-description-wrapper.open {
+      .collapse-description {
+        font-size: 12px;
+        line-height: 18px;
+        padding: 10px;
+      }
+    }
+    .collapse-description-wrapper.open {
+      li {
+        font-size: 12px;
+        line-height: 17.11px;
+      }
     }
   }
 }
