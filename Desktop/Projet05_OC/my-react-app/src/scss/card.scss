@@ -1,32 +1,58 @@
-.card {
+.card-link {
   position: relative;
-  width: 340px;
-  height: 340px;
-  display: flex;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  display: inline-block;
 
-  .card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .card {
+    position: relative;
+    width: 340px;
+    height: 340px;
+    display: flex;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-  }
-}
+    overflow: hidden; // Nécessaire pour que les coins restent arrondis
 
-.card-title {
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  max-width: 58%;
-  font-family: Montserrat;
-  font-size: 18px;
-  font-weight: 700;
-  color: white;
-  height: 52px;
-  left: 20px;
-  top: 250px;
-  text-shadow: -1px -1px 0 #000, /* Ombre en haut à gauche */ 1px -1px 0 #000,
-    /* Ombre en haut à droite */ -1px 1px 0 #000,
-    /* Ombre en bas à gauche */ 1px 1px 0 #000; /* Ombre en bas à droite */
+    .card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+    }
+
+    // Dégradé superposé à l'image
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(10, 10, 10, 0) 42%,
+        rgba(4, 4, 4, 0.205) 99.99%,
+        rgba(0, 0, 0, 0.5) 100%
+      );
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .card-title {
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      max-width: 58%;
+      font-family: Montserrat;
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+      height: 52px;
+      left: 20px;
+      top: 250px;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+        1px 1px 0 #000;
+      z-index: 3; // Toujours au-dessus du dégradé
+    }
+  }
 }
